@@ -7,5 +7,14 @@
     "description": "Affiche les données météo dans le terminal.",
     "binary_url": "https://github.com/HexaWX/stdout-exporter/releases/download/{{.Version}}/stdout-{{.OS}}-{{.Arch}}",
     "author": "F. Colinet"
+  },
+  {
+    "name": "dummy-driver",
+    "display_name": "Input simulator",
+    "version": "1.0.0",
+    "repository": "https://github.com/HexaWX/dummy-driver",
+    "description": "Envoi des données fictives au serveur météo.",
+    "binary_url": "https://github.com/HexaWX/dummy-driver/releases/download/{{.Version}}/dummy-driver-{{.OS}}-{{.Arch}}",
+    "author": "F. Colinet"
   }
 ]
