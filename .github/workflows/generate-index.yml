@@ -1,0 +1,26 @@
+name: Generate Plugin Index
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'exporters/**'
+      - 'drivers/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate index.json
+        run: |
+          # On utilise jq pour fusionner tous les JSON dans une liste
+          jq -s '.' exporters/*.json drivers/*.json > index.json
+
+      - name: Deploy to GitHub Pages (ou commit l'index)
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add index.json
+          git commit -m "Update plugin index" || exit 0
+          git push
