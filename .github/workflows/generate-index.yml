@@ -5,6 +5,7 @@ on:
     paths:
       - 'exporters/**'
       - 'drivers/**'
+  workflow_dispatch:
 
 jobs:
   build:
