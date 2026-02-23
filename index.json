@@ -7,7 +7,7 @@
     "description": "Envoi des données fictives au serveur météo.",
     "binary_url": "https://github.com/hexawx/dummy-driver/releases/download/v{{.Version}}/dummy-driver-{{.OS}}-{{.Arch}}",
     "author": "F. Colinet",
-    "type": "exporter"
+    "type": "driver"
   },
   {
     "name": "stdout-exporter",
